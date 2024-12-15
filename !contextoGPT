@@ -3,7 +3,7 @@ $onlyIf[$message!=;Introduzca un contexto de lo que será la IA.]
 $onlyPerms[managechannels;Necesitas el permiso de ``gestionar canales`` para usar este comando!]
 $setServerVar[contextoGPT;$message]
 $title[Contexto establecido]
-$description[**El contexto de EdgaGPT es:** $message]
+$description[**El contexto del GPT es:** $message]
 $color[#0086FF]
 $suppressErrors[Algo salio mal,intentalo de nuevo] 
 
