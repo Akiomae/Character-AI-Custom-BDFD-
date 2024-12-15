@@ -1,0 +1,13 @@
+$nomention
+$onlyIf[$message!=;Introduzca un nombre para la IA.]
+$onlyPerms[managechannels;Necesitas el permiso de ``gestionar canales`` para usar este comando!]
+$setServerVar[IAname;$message]
+$createRole[$message; #FFFFFF; no; yes]
+$title[Nombre establecido]
+$description[**Ahora el nombre de la IA es:** $message
+*Como hablar con la IA,* ejemplo
+`@$message` Hola como estas]
+$color[#0086FF]
+$suppressErrors[Algo salio mal,intentalo de nuevo] 
+
+$c[Este comando es para establecer el nombre a tu IA]
