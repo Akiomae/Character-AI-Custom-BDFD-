@@ -1,0 +1,13 @@
+$nomention
+$onlyPerms[managechannels;Necesitas el permiso de ``gestionar canales`` para usar este comando!]
+$onlyIf[$mentionedChannels[1]!=; Porfavor menciona un canal]
+$if[$serverChannelExists[$mentionedChannels[1]]==false]El canal no existe$else
+$setServerVar[GPTchannel;$mentionedChannels[1]]
+$title[Canal GPT establecido]
+$description[El canal establecido es <#$mentionedChannels[1]>
+Ahora establece un nombre para tu IA de lo contrario no funcionará, 
+Usa: **E!nameGPT** `nombre`] 
+$reply
+$endif
+
+$c[Este codigo es para establecer un canal donde respondera la IA]
