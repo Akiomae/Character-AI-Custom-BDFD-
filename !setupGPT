@@ -6,7 +6,7 @@ $setServerVar[GPTchannel;$mentionedChannels[1]]
 $title[Canal GPT establecido]
 $description[El canal establecido es <#$mentionedChannels[1]>
 Ahora establece un nombre para tu IA de lo contrario no funcionará, 
-Usa: **E!nameGPT** `nombre`] 
+Usa: **!nameGPT** `nombre`] 
 $reply
 $endif
 
