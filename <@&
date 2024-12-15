@@ -1,0 +1,31 @@
+$c[Este comando hace funcionar el sistema, el prefix debe ser si o si <@& para que funcione correctamente]
+
+$nomention
+$suppressErrors[ ]
+$if[$channelID==$getServerVar[GPTchannel]]
+$if[$roleName[$mentionedRoles[1]]==$getServerVar[IAname]]
+
+$onlyIf[$message!=;Introduzca una pregunta o mensaje.]
+$suppressErrors[Ocurrió un error o la api está caida 🍂.]
+
+$httpGet[https://api.agatz.xyz/api/gptlogic?logic=$url[encode;Tu nombre es $getServerVar[IAname], $getServerVar[contextoGPT]. Este es el nombre del usuario $username[$authorID]]&p=$url[encode;$noMentionMessage]]
+
+$var[url;$webhookCreate[$channelID; $getServerVar[IAname];]]
+
+$async[2]
+  $webhookAvatarURL[$var[url];$getServerVar[IAavatar]]
+  $webhookSend[$var[url];$httpResult[data;result]]
+$endasync
+
+$async[1]
+  $replyIn[5s]
+  $webhookDelete[$var[url]]
+$endasync
+
+$await[2]
+$allowMention
+
+$else
+
+$endif
+$endif
