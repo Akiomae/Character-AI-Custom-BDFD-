@@ -1,0 +1,10 @@
+$nomention
+$onlyIf[$message!=;Introduzca el link de una imagen para el avatar de la IA.]
+$onlyPerms[managechannels;Necesitas el permiso de ``gestionar canales`` para usar este comando!]
+$setServerVar[IAavatar;$message]
+$title[Avatar IA establecido]
+$image[$message]
+$color[#0086FF]
+$suppressErrors[Algo salio mal,intentalo de nuevo] 
+
+$c[Establece un avatar para la IA]
